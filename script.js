@@ -97,6 +97,10 @@ function updateBigCup() {
   const fullCups = document.querySelectorAll('.cup-small.full').length;
   const totalCups = smallCups.length;
 
+  console.log('dailyGoal:', dailyGoal);
+  console.log('fullCups:', fullCups);
+  console.log('cupVolume:', cupVolume);
+
   if (fullCups === 0) {
     percentage.style.visibility = 'hidden';
     percentage.style.height = 0;
@@ -113,6 +117,7 @@ function updateBigCup() {
   } else {
     remained.style.visibility = 'visible';
     const remainedLiters = dailyGoal - (cupVolume * fullCups) / 1000;
+    console.log('remainedLiters:', remainedLiters);
     liters.innerText = `${remainedLiters.toFixed(2)}L`;
   }
 }
