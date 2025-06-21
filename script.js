@@ -70,7 +70,8 @@ function updateBigCup() {
     percentage.style.height = 0;
   } else {
     percentage.style.visibility = 'visible';
-    percentage.style.height = `${(fullCups / totalCups) * 330}px`;
+    const bigCupHeight = percentage.parentElement.clientHeight;
+    percentage.style.height = `${(fullCups / totalCups) * bigCupHeight}px`;
     percentage.innerText = `${((fullCups / totalCups) * 100).toFixed(0)}%`;
   }
 
