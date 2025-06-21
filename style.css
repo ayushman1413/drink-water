@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
+  padding: 20px;
 }
 
 h1 {
@@ -26,6 +27,41 @@ h1 {
 h3 {
   font-weight: 400;
   margin: 10px 0;
+}
+
+input#goal-input {
+  width: 100px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input#goal-input:focus {
+  border-color: var(--fill-color);
+  box-shadow: 0 0 5px var(--fill-color);
+}
+
+button#reset-btn {
+  background-color: var(--border-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button#reset-btn:hover,
+button#reset-btn:focus {
+  background-color: var(--fill-color);
+  outline: none;
 }
 
 .cup {
@@ -101,4 +137,37 @@ h3 {
 .text {
   text-align: center;
   margin: 0 0 5px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .cup {
+    height: 250px;
+    width: 120px;
+  }
+
+  .cup.cup-small {
+    height: 75px;
+    width: 40px;
+    font-size: 12px;
+    margin: 3px;
+  }
+
+  .cups {
+    width: 220px;
+  }
+
+  button#reset-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+  }
+
+  input#goal-input {
+    width: 80px;
+    font-size: 14px;
+  }
 }
